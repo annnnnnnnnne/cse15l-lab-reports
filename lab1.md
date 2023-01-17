@@ -2,9 +2,9 @@
 This tutorial is about logging into a course-spefic accound on `ieng6`.
 
 It includes 3 main parts:
-* [Installing VScode](#installing-vscode)
-* [Remotely Connecting](#remotely-connecting)
-* [Trying Some Commands](#trying-some-commands)
+1. [Installing VScode](#installing-vscode)
+2. [Remotely Connecting](#remotely-connecting)
+3. [Trying Some Commands](#trying-some-commands)
 
 ## Installing VScode
 * Download [VScode](https://code.visualstudio.com/)
@@ -15,7 +15,8 @@ It includes 3 main parts:
 ### Course-Specific Account
 * Find your [account](https://sdacs.ucsd.edu/~icc/index.php) and reset the password
 * Your username will look like `cs15lwi23zz` (zz is your unique username)
-### Use ssh
+
+### Use 'ssh'
 * Open a terminal in VScode
 * Run `ssh cs15lwi23zz@ieng6.ucsd.edu` (replace zz with your real username)
 * You  will get a message: `Are you sure you want continue?`
