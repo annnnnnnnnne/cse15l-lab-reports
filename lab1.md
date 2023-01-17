@@ -16,7 +16,7 @@ It includes 3 main parts:
 * Find your [account](https://sdacs.ucsd.edu/~icc/index.php) and reset the password
 * Your username will look like `cs15lwi23zz` (zz is your unique username)
 
-### Use 'ssh'
+### Use `ssh`
 * Open a terminal in VScode
 * Run `ssh cs15lwi23zz@ieng6.ucsd.edu` (replace zz with your real username)
 * You  will get a message: `Are you sure you want continue?`
