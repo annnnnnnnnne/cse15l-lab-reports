@@ -49,6 +49,7 @@ class StringServer {
 Hello
 ```
 ![image](lab2_Hellohi.png)
+
 ### `How are you`:
 * String handleRequest(URI url) is called.
 * What I type after `=` will be concatenated to `String keepTrack`. `How are you` is now concatenated to `keepTrack`.
