@@ -41,7 +41,7 @@ class StringServer {
     }
 }
 ```
-#### `Hello`:
+### `Hello`:
 * String handleRequest(URI url) is called.
 * What I type after `=` will be concatenated to `String keepTrack`. `Hello` is now concatenated to `keepTrack`.
 * The value of `keepTrack` is changed, and it is now
