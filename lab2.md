@@ -1,10 +1,69 @@
 # Week 4 Lab Report 2
 ## Part 1
+### StringServer
+```js
+import java.io.IOException;
+import java.net.URI;
+import java.util.*;
+class Handler implements URLHandler {
+    // The one bit of state on the server: a number that will be manipulated by
+    // various requests.
+    String keepTrack = "";
+    public String handleRequest(URI url) {
+      if (url.getPath().equals("/")) {
+          return String.format("");
+
+      } else {
+          System.out.println("Path: " + url.getPath());
+          if (url.getPath().contains("/add")) {
+              String[] parameters = url.getQuery().split("=");
+              if (parameters[0].equals("s")) {
+                keepTrack += String.format("%s\n", parameters[1]);
+                return String.format(keepTrack);
+              }
+          }
+          return "404 Not Found!";
+      }
+  } 
+
+}
+
+class StringServer {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port number! Try any number between 1024 to 49151");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+```
+#### `Hello`:
+* String handleRequest(URI url) is called.
+* What I type after `=` will be concatenated to `String keepTrack`. `Hello` is now concatenated to `keepTrack`.
+* The value of `keepTrack` is changed, and it is now
+```
+Hello
+```
+![image](lab2_Hellohi.png)
+### `How are you`:
+* String handleRequest(URI url) is called.
+* What I type after `=` will be concatenated to `String keepTrack`. `How are you` is now concatenated to `keepTrack`.
+* The value of `keepTrack` is changed, and it is now
+```
+Hello
+How are you
+```
+![image](lab2_How_are_you.png)
+
 ## Part 2
 ### bug:`reverseInPlace()`
 
 #### failure inducing input: `{5, 6, 7, 8}`
-```
+```js
 @Test 
 public void testReverseInPlace1() {
   int[] input1 = {5, 6, 7, 8};
@@ -13,7 +72,7 @@ public void testReverseInPlace1() {
 }
 ```
 #### input that doesn't induce a failure: `{5}`
-```
+```js
 @Test 
 public void testReverseInPlace1() {
   int[] input1 = {5};
