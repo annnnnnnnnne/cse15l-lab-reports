@@ -49,7 +49,7 @@ class StringServer {
 Hello
 ```
 
-![image](lab2_Hellohi.png)
+![image](lab2_hello0212.png)
 
 ### `How are you`:
 * String `handleRequest(URI url)` is called.
