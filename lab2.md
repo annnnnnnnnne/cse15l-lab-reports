@@ -95,6 +95,7 @@ public void testReverseInPlace1() {
 failure inducing input: `{5, 6, 7, 8}`
 
 ![image](lab2_JUnit_failure.png)
+![image](lab2_JUnit_test_terminal)
 
 input that doesn't induce a failure: `{5}`
 
