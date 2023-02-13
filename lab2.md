@@ -70,6 +70,7 @@ How are you
 ### bug:`reverseInPlace()`
 
 #### failure inducing input: `{5, 6, 7, 8}`
+* expected output:  `{8, 7, 6, 5}`
 ```js
 @Test 
 public void testReverseInPlace1() {
@@ -79,6 +80,7 @@ public void testReverseInPlace1() {
 }
 ```
 #### input that doesn't induce a failure: `{5}`
+* expected output: `{5}`
 ```js
 @Test 
 public void testReverseInPlace1() {
