@@ -94,8 +94,13 @@ public void testReverseInPlace1() {
 
 failure inducing input: `{5, 6, 7, 8}`
 
+* The expected output should be `{8, 7, 6, 5}`, but the actual ouput is `{8, 7, 7, 8}`.
+* These bugs occur because when `i` is greater than the half of `arr.length - 1`, `arr[i]` is `=` the `arr`'s elements that is already replaced, not the original `arr`. 
+* In order to fix the bug, I created a `newArray` to store the data of the reversed `arr`.
+* Once the loop ends `arr = newArray`, so `arr` can be the reverse of its original array.
+
 ![image](lab2_JUnit_failure.png)
-![image](lab2_JUnit_test_terminal)
+![image](lab2_JUnit_test_terminal.png)
 
 input that doesn't induce a failure: `{5}`
 
