@@ -41,8 +41,9 @@ class StringServer {
 ```
 ### `Hello`:
 * String `handleRequest(URI url)` is called.
-    * The parameter `URI url` here is 
-* What I type after `=` will be concatenated to `String keepTrack`. `Hello` is now concatenated to `keepTrack`.
+* The parameter `URI url` here is `http://localhost:8987/add-message?s=hello`.
+* `handleRequest(URI url)` will get the path of the `URI url`, which is the things after the port number `8987`.
+* When the path is `add-message`, what I type after `?s=` will be concatenated to `String keepTrack`. `Hello` is now concatenated to `keepTrack`.
 * The value of `keepTrack` is changed, and it is now
 
 ```
@@ -53,7 +54,9 @@ Hello
 
 ### `How are you`:
 * String `handleRequest(URI url)` is called.
-* What I type after `=` will be concatenated to `String keepTrack`. `How are you` is now concatenated to `keepTrack`.
+* * The parameter `URI url` here is `http://localhost:8987/add-message?s=How are you`.
+* `handleRequest(URI url)` will get the path of the `URI url`, which is the things after the port number `8987`.
+* When the path is `add-message`, what I type after `?s=` will be concatenated to `String keepTrack`. `How are you` is now concatenated to `keepTrack`.
 * The value of `keepTrack` is changed, and it is now
 
 ```
@@ -61,7 +64,7 @@ Hello
 How are you
 ```
 
-![image](lab2_How_are_you.png)
+![image](lab2_howareyou0212.png)
 
 ## Part 2
 ### bug:`reverseInPlace()`
