@@ -6,16 +6,15 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.*;
 class Handler implements URLHandler {
-    // The one bit of state on the server: a number that will be manipulated by
-    // various requests.
+    int num = 0;
+    ArrayList<String> stringAll = new ArrayList<>();
     String keepTrack = "";
     public String handleRequest(URI url) {
       if (url.getPath().equals("/")) {
-          return String.format("");
-
+          return String.format(keepTrack);
       } else {
           System.out.println("Path: " + url.getPath());
-          if (url.getPath().contains("/add")) {
+          if (url.getPath().contains("/add-message")) {
               String[] parameters = url.getQuery().split("=");
               if (parameters[0].equals("s")) {
                 keepTrack += String.format("%s\n", parameters[1]);
@@ -24,8 +23,7 @@ class Handler implements URLHandler {
           }
           return "404 Not Found!";
       }
-  } 
-
+    } 
 }
 
 class StringServer {
@@ -42,7 +40,8 @@ class StringServer {
 }
 ```
 ### `Hello`:
-* String handleRequest(URI url) is called.
+* String `handleRequest(URI url)` is called.
+    * The parameter `URI url` here is 
 * What I type after `=` will be concatenated to `String keepTrack`. `Hello` is now concatenated to `keepTrack`.
 * The value of `keepTrack` is changed, and it is now
 
@@ -53,7 +52,7 @@ Hello
 ![image](lab2_Hellohi.png)
 
 ### `How are you`:
-* String handleRequest(URI url) is called.
+* String `handleRequest(URI url)` is called.
 * What I type after `=` will be concatenated to `String keepTrack`. `How are you` is now concatenated to `keepTrack`.
 * The value of `keepTrack` is changed, and it is now
 
