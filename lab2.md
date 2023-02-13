@@ -100,6 +100,7 @@ failure inducing input: `{5, 6, 7, 8}`
 * Once the loop ends `arr = newArray`, so `arr` can be the reverse of its original array.
 
 ![image](lab2_JUnit_failure.png)
+![image](lab2_JUnit_test_terminal_compile.png)
 ![image](lab2_JUnit_test_terminal.png)
 
 input that doesn't induce a failure: `{5}`
@@ -125,7 +126,18 @@ After:
     arr = newArray;
   }
   ```
-The code that has bug is letting `arr` storing a new reversed array and accessing the old `arr` at the same time. To fix the problem, I created a new array, `newArray`, to store the elements of the reversed `arr`. After the reversed array is stored in `newArray`, `arr` can be the same as the reversed array by `arr = newArray`.
+* The code that has bug is letting `arr` storing a new reversed array and accessing the old `arr` at the same time. 
+* When the `i` in the loop greater than half of `length - 1`, `arr[i]` will equal to the new element that was just replaced. 
+* When in the for loop with the failure inducing input `{5, 6, 7, 8}`:
+    * `i = 0`: `arr[0] = 8` (correct)
+    * `i = 1`: `arr[1] = 7` (correct)
+    * `i = 2`: `arr[2] = 7` (incorrect) 
+        * actual: using the new element of `arr[1]` which is `7`
+        * expected: using the original element of `arr[1]` which is `6`
+    * `i = 3`: `arr[3] = 8` (incorrect) 
+        * actual: using the new element of `arr[0]` which is `8`
+        * expected: using the original element of `arr[0]` which is `5`
+* To fix the problem, I created a new array, `newArray`, to store the elements of the reversed `arr`. After the reversed array is stored in `newArray`, `arr` can be the same as the reversed array by `arr = newArray`.
  
 ## Part 3
 Before this week's lab, I have no idea what JUnit was. I always thought I need to have a main method and test my program in the main method. Now that I learned about JUnit, testings are more efficient.
