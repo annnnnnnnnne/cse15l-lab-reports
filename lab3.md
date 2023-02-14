@@ -559,6 +559,7 @@ This command will grep from the file and returns the lines that has words that s
 The specific alphabet here is `b`, and the file is `HandRHawaii.txt`.
 
 command:
+
 ```
 $ grep '\bb\w*' HandRHawaii.txt
 ```
