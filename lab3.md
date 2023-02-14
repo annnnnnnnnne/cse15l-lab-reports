@@ -1,5 +1,6 @@
 # Week 4 Lab Report 3
 ## `grep pattern file`
+### source: chatGPT, input command: how to use command grep
 
 This command will grep from the file and return the lines that has the word you type for pattern.
 It is case sensitive.
@@ -44,6 +45,7 @@ output:
 ```
 
 ## grep -r pattern
+### source: chatGPT, input command: how to use command grep
 
 This command will grep all the files in the directory that has the word that you type for pattern.
 The specific pattern here is `Airport`, and it is in the directory `berlitz1`.
@@ -425,6 +427,7 @@ WhereToMalaysia.txt:        The venerable National Museum, on Stamford Road just
 WhereToMallorca.txt:        Museum next door, a treasure-trove of silver monstrances and   
 ```
 ## grep -i pattern file
+### source: chatGPT, input command: how to use command grep
 This command will grep from the file and return the lines that has the word you type for pattern.
 The `-i` makes it not case sensitive.
 The specific pattern here is `honolulu`, and the file is `HandRHawaii.txt`.
@@ -466,6 +469,7 @@ $ grep -1 museum HandRLasVegas.txt
         Lisbon, are government-owned hotels and inns; the ones listed occupy
 ```
 ## `grep 'ba\w*' file` (`a` is the specific alphabet)
+### source: chatGPT, input command: how to use command grep
 This command will grep from the file and returns the lines that has words that starts with e.g. `a`.
 The specific alphabet here is `a`, and the file is `HandRHawaii.txt`.
 
