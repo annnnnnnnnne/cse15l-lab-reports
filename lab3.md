@@ -1,8 +1,9 @@
-# Week 4 Lab Report 2
+# Week 4 Lab Report 3
 ## `grep pattern file`
 
-This command will grep the file that has the word that you type for pattern.
-The specific pattern here is Honolulu, and the file is HandRHawaii.txt.
+This command will grep from the file and return the lines that has the word you type for pattern.
+It is case sensitive.
+The specific pattern here is `Honolulu`, and the file is `HandRHawaii.txt`.
 
 command:
 ```
@@ -27,8 +28,9 @@ output:
 
 
 
-This command will grep the file that has the word that you type for pattern.
-The specific pattern here is hotel, and the file is HandRHongKong.txt.
+This command will grep from the file and return the lines that has the word you type for pattern.
+It is case sensitive.
+The specific pattern here is `hotel`, and the file is `HandRHongKong.txt`.
 
 command:
 ```
@@ -44,7 +46,7 @@ output:
 ## grep -r pattern
 
 This command will grep all the files in the directory that has the word that you type for pattern.
-The specific pattern here is Airport, and it is in the directory `berlitz1`.
+The specific pattern here is `Airport`, and it is in the directory `berlitz1`.
 
 command:
 ```
@@ -421,6 +423,204 @@ WhereToMalaysia.txt:        beyond, museums, including the Asian Civilization Mu
 WhereToMalaysia.txt:        Museum, and the Singapore Art Museum.
 WhereToMalaysia.txt:        The venerable National Museum, on Stamford Road just
 WhereToMallorca.txt:        Museum next door, a treasure-trove of silver monstrances and   
+```
+## grep -i pattern file
+This command will grep from the file and return the lines that has the word you type for pattern.
+The `-i` makes it not case sensitive.
+The specific pattern here is `honolulu`, and the file is `HandRHawaii.txt`.
+command:
+```
+$ grep -i honolulu HandRHawaii.txt
+```
+output:
+```
+        Oahu (Including Honolulu)
+        Aston Waikiki Sunset $$$ 229 Paoakalani Avenue, Honolulu, HI
+        Halekulani $$$$ 2199 Kalia Road, Honolulu, HI 96815; Tel.
+        Hilton Hawaiian Village $$$–$$$$ 2005 Kalia Road, Honolulu,
+        Honolulu, HI 96815; Tel. (808) 923-1234 or (800) 233-1234; fax (808)
+        half-hour drive of Honolulu. 387 rooms.
+        Honolulu, HI 96816; Tel. (808) 739-8888 or (800) 367-2525; fax (808)
+        Outrigger Reef $$$ 2169 Kalia Road, Honolulu, HI 96815; Tel.
+        Pacific Beach Hotel $$$ 2490 Kalakaua Avenue,, Honolulu, HI
+        Royal Hawaiian $$$$ 2259 Kalakaua Avenue, Honolulu, HI
+        Honolulu, HI 96815; Tel. (808) 922-3111 or (800) 325-3535; fax (808)
+        Honolulu, HI 96815; Tel. (808) 922-5811 or (800) 325-3535; fax (808)
+        Sheraton Waikiki $$$–$$$$ 2255 Kalakaua Avenue, Honolulu,
+```
+
+This command will grep from the file and return the lines that has the word you type for pattern.
+The `-i` makes it not case sensitive.
+The specific pattern here is `Museum`, and the file is `HandRHongKong.txt`.
+
+command:
+```
+$ grep -1 museum HandRLasVegas.txt
+```
+output:
+```
+$ grep -1 museum HandRLasVegas.txt
+
+        Hotel prices in Lisbon have risen in recent years to match        Central Lisbon covers the area from the waterfront, Bairro
+        Alto, Lapa, and Avenida da Liberdade. North Lisbon refers to the area
+        Lisbon, are government-owned hotels and inns; the ones listed occupy
+```
+## `grep 'ba\w*' file` (`a` is the specific alphabet)
+This command will grep from the file and returns the lines that has words that starts with e.g. `a`.
+The specific alphabet here is `a`, and the file is `HandRHawaii.txt`.
+
+command:
+```
+$ grep '\ba\w*' HandRHawaii.txt
+```
+output:
+        <www.aston-hotels.com>. One of Aston’s many condominium resort
+        kitchens. Lanais afford views of the Diamond Head end of Waikiki Beach.       
+        and luxurious bathrooms with robes, make this a “House Befitting
+        Heaven,” the meaning of its Hawaiian name. With plenty of beachfront, a       
+        top French restaurant (La Mer), and the serene House Without A Key
+        outdoor lounge for sunset drinks, Halekulani is a complete resort. 454        
+        covers 22 beachfront acres of gardens, lagoons, waterfalls, coconut
+        palms, and swimming pools. There are dozens of shops, a spa, and a
+        city-within-a-city on the beach. 2,998 rooms.
+        recently-renovated 40-story towers cover a city block at the Diamond
+        Head end of Waikiki’s shopping avenue (across the street from the
+        situated within a 640-acre resort community that provides golf, tennis,       
+        3 miles of beaches and lagoons, and a world-class spa within a
+        and refurbished for the new century, the venerable Kahala artfully
+        mixes Hawaiian, Asian, and international touches. There’s a private
+        beach, swimming pool, and lagoon with resident turtles and dolphins.
+        Outrigger and related Ohana hotels. Its rooms, views, and amenities
+        <www.pacificbeachhotel.com>. The hotel’s twin towers, located at
+        the Diamond Head end of Waikiki, are a block from Kuhio Beach. Rooms
+        have private lanais, refrigerators, and coffeemakers. 830 rooms.
+        Matson steamship line, has been a landmark since it opened in 1927 on
+        the site of a royal summer palace on the beach. 527 rooms.
+        elegance. The amenities and daily activities (including hotel tours)
+        are top-notch, and the buffet meals, especially on Sunday, on the
+        Waikiki Beach, but a few steps from the heart of the Waikiki shopping
+        district, the Princess Kaiulani dates back to 1955, but the rooms are
+        all updated and its 29-story tower is much newer. 1,150 rooms.
+        services and room options. 1,852 rooms.
+        resort — said to be the most expensive resort ever built — is a
+        on Maui’s remote and lush east shore, this quiet upscale resort on 66
+        acres with a wild volcanic oceanfront is the oldest in Maui (1946). The       
+        covered porches, are luxurious within; some come with private hot tubs.       
+        resort complex, the Hyatt Regency is a 40-acre tropical fantasy resort,       
+        with exotic birds, waterfalls, garden atriums, and sculpted swimming
+        Kaanapali Beach, the Mauian is a Hawaiian-owned hotel dating back to
+        1959, restored to its original ambience. All units are equipped with
+        kitchens and ceiling fans (no air-conditioning, TVs, or phones). The
+        free breakfast is a delight. 44 rooms.
+        equipped with a pool and tennis courts. 360 rooms.
+        622-4852; <www.outrigger.com>. This 22-acre oceanfront resort,
+        adjacent to two of the best beaches on the Kona Coast, has a
+        spectacular open lobby and fine rooms with private balconies. 516
+        western Maui oceanfront resorts, the Ritz-Carlton is a grand hotel with       
+        hints of tropical plantation days, set amidst rugged coves and
+        Maui’s big resorts, the Prince has a pretty beach facing Molokini Isle.       
+        The rooms are large, lavish, and uncluttered, all with private
+        ocean-view lanais. The courtyard grounds are lush with gardens and
+        the 1970s has been fully renovated; rooms are spar­kling and modern.
+        The grounds, including a royal sacred pool, are lush, and a few steps
+        away is one of the island’s best snorkeling and swimming beaches. 311
+        <www.volcano-hawaii.com>. Brian and Lisha Crawford are the kings
+        of bed & breakfast accommodations in the Volcano area. They have
+        rooms and houses to fit many tastes and budgets, from the lavish to the       
+        gourmet breakfasts and afternoon teas. 6 rooms.
+        floors, private gardens, and spacious lanais create a relaxing hideaway       
+        on the beach. There’s a private championship golf course, tennis court        
+        complex, and five swimming pools facing the ocean. 243 rooms.
+        for the whole family, with trams and launches to take guests to their
+        There’s also a 1-acre swimming pool with water slides and a vast array        
+        of amenities and services all over the 62-acre (25-hectare) oceanfront        
+        lava on the Kohala Coast. It was lauded as the best island resort in
+        the world for years, and it is still one of Hawaii’s premier oceanfront       
+        resorts, with a vast art collection, a great beach, a major golf
+        course, a loyal staff, and a style all its own. 310 rooms.
+        lanais face the beach and an atrium complex of gardens and pools in
+        through ancient fishponds and lagoons where endangered baby sea turtles       
+        are raised and released every July 4th. At the end of the trail is a
+        cove and reef where the freed turtles await swimmers and snorkelers.
+        full-service resort fronts a tremendous swimming and snorkeling beach
+        apartments, a swimming poo1, tennis courts, and a golf course. Walk to        
+        <www.molokai-ranch.com>. Still a 54,000-acre working cattle and
+        deluxe resort, with fine rooms with large lanais in the new lodge and
+        three clusters of upscale “tentalows” and yurts, including one deluxe
+        camp right on the beach. Outdoor activities run the gamut: horseback
+        outdoor enthusiasts. Rooms are quaint, with no air-conditioning.
+        Lodge at Koele $$$$ P.O. Box 310, Lanai City, HI 96793;
+        is appointed like an Old English estate, with writing desks,
+        four-poster beds, library, music room. The 21-acre grounds include a
+        and a world-class golf course. 102 rooms.
+        sports, golf, tennis, a spa, and jeep tours. 250 rooms.
+```
+This command will grep from the file and returns the lines that has words that starts with e.g. `a`.
+The specific alphabet here is `b`, and the file is `HandRHawaii.txt`.
+
+command:
+```
+$ grep '\bb\w*' HandRHawaii.txt
+```
+output:
+```
+        and luxurious bathrooms with robes, make this a “House Befitting
+        Heaven,” the meaning of its Hawaiian name. With plenty of beachfront, a
+        covers 22 beachfront acres of gardens, lagoons, waterfalls, coconut
+        branch of the Bishop Museum in the Kalia Tower. Families love this
+        city-within-a-city on the beach. 2,998 rooms.
+        recently-renovated 40-story towers cover a city block at the Diamond
+        beach). 1,241 rooms.
+        on the west side of Oahu, expertly managed by JW Marriott, Ihilani is
+        3 miles of beaches and lagoons, and a world-class spa within a
+        beach, swimming pool, and lagoon with resident turtles and dolphins.
+        best stretches of Waikiki oceanfront, is more deluxe than most
+        rival those of more expensive hotels on the same beach. 883 rooms.
+        the Diamond Head end of Waikiki, are a block from Kuhio Beach. Rooms
+        <www.royal-hawaiian.com>. Waikiki’s “Pink Palace,” built by the
+        Matson steamship line, has been a landmark since it opened in 1927 on
+        the site of a royal summer palace on the beach. 527 rooms.
+        in 1901. The hotel’s original banyan wing has been restored to its old
+        are top-notch, and the buffet meals, especially on Sunday, on the
+        beachfront veranda near the courtyard banyan tree couldn’t be more
+        931-4526; <www.princess-kaiulani.com>. A block removed from
+        Waikiki Beach, but a few steps from the heart of the Waikiki shopping
+        district, the Princess Kaiulani dates back to 1955, but the rooms are
+        largest of Sheraton’s four Waikiki beachfront hotels, with the most
+        resort — said to be the most expensive resort ever built — is a
+        with exotic birds, waterfalls, garden atriums, and sculpted swimming
+        Kaanapali Beach, the Mauian is a Hawaiian-owned hotel dating back to
+        free breakfast is a delight. 44 rooms.
+        adjacent to two of the best beaches on the Kona Coast, has a
+        spectacular open lobby and fine rooms with private balconies. 516
+        Maui’s big resorts, the Prince has a pretty beach facing Molokini Isle.       
+        the 1970s has been fully renovated; rooms are spar­kling and modern.
+        away is one of the island’s best snorkeling and swimming beaches. 311
+        of bed & breakfast accommodations in the Volcano area. They have
+        rooms and houses to fit many tastes and budgets, from the lavish to the       
+        gourmet breakfasts and afternoon teas. 6 rooms.
+        325-8100; <www.fourseasons.com>. Upscale bungalows with slate
+        on the beach. There’s a private championship golf course, tennis court        
+        rooms, the Hilton is best known for its swim-with-the-dolphins program.       
+        880-3112; <www.maunakeabeachhotel.com>. Built in 1965 by Laurance
+        Rockefeller, this was the first great resort to be carved out of the
+        lava on the Kohala Coast. It was lauded as the best island resort in
+        resorts, with a vast art collection, a great beach, a major golf
+        lanais face the beach and an atrium complex of gardens and pools in
+        through ancient fishponds and lagoons where endangered baby sea turtles       
+        full-service resort fronts a tremendous swimming and snorkeling beach
+        Pali Coast, these condominium units are beginning to show their age,
+        but they come with complete kitchens, a white-sand beach with tide
+        245-5049; <www.hcr.com>. Hit hard by Hurricaine Iniki, this
+        the best hotel pools and swimming beaches in Hawaii. 419 rooms.
+        among the best-maintained on the southern shore. Units are very large,        
+        shore, Sheraton offers large rooms in three buildings, including two
+        buildings facing a lava rock shoreline. Swimming pools, spa, tennis,
+        camp right on the beach. Outdoor activities run the gamut: horseback
+        riding, ocean kayaking, excellent mountain biking, clay shooting,
+        four-poster beds, library, music room. The 21-acre grounds include a
+        croquet court, lawn bowling, horseback-riding stables, formal gardens,        
+        Lanai’s finest beach (Hulopoe), the Manele Bay Hotel offers water
 ```
 
 
