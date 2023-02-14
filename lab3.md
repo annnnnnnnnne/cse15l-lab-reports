@@ -474,6 +474,7 @@ command:
 $ grep '\ba\w*' HandRHawaii.txt
 ```
 output:
+```
         <www.aston-hotels.com>. One of Aston’s many condominium resort
         kitchens. Lanais afford views of the Diamond Head end of Waikiki Beach.       
         and luxurious bathrooms with robes, make this a “House Befitting
